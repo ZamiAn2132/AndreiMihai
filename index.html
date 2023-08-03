@@ -1,0 +1,335 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mihai Andrei Personal Portofolio webstie</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap" rel="stylesheet">
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+
+    <script src="https://kit.fontawesome.com/7f9bc2d176.js" crossorigin="anonymous"></script>
+</head>
+<body>
+    <div id="header">
+        <div class="container">
+            <nav>
+                <img src="images/andrei_logo.png" class="logo">
+                <ul id="sidemenu">
+                    <!-- aici am adaugat tagul "a"
+                    daca vreau sa scimb ceva la astea pot sa modific
+                in style.css unde este: nav ul li a{}-->
+                    <li><a href="#header">Home</a></li>
+                    <li><a href="#about">About</a></li>
+                    <li><a href="#services">Services</a></li>
+                    <li><a href="#portofolio">Certifications</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                    <i class="fa-solid fa-circle-xmark" onclick="closemenu()"></i>
+                </ul><!-- aici se inchide tag ul ul-->
+                <i class="fa-solid fa-bars" onclick="openmenu()"></i>
+            </nav> <!-- aici se inchide tag ul nav-->
+            <div class="header-text">
+                <p>Hello there!</p>
+                <!-- <br> scrie pe o alta linie-->
+                <!-- <span> este un alt tag in tagul h1 in clasa header-text-->
+                <h1> I am Andrei<br> <span>Cloud</span> <br>Engineer</h1> 
+            </div>
+            
+            <div class="semi-title">   
+                <h2>Discover my professional journey through this personal resume website.</h2>
+            </div> 
+        </div>
+
+    </div>
+
+
+    <!-- about part-->
+
+
+    <div id="about">            <!--Aici o sa configuram tot ce tine de sectia about -->
+        <div class="container">             <!-- o clasa numita container-->
+            <div class="row">               <!-- o clasa(coloana) numita row care e in clasa continer deja-->
+
+<!-- daca schimb about-col-1 cu about-col-2 textu about me o sa fie deasupra imaginii-->
+
+                <div class="about-col-1">           <!-- o clasa(coloana) numita about care e in row-->
+                    <img src="images/andrei-user.png" alt="aici vad numa daca nu se incarca imaginea">
+                </div>
+                <div class="about-col-2">
+                    <h1 class="sub-title">About Me</h1>
+                    <p class="about-text"> As a passionate and driven engineer, I thrive on tackling intricate challenges and leveraging 
+                        state-of-the-art technology to propel business growth.
+                        <br> I am actively seeking exciting opportunities that will allow me to continuously refine 
+                        my skills while making impactful contributions to groundbreaking projects.</p>
+                    <div class="tab-titles">
+                        <p class="tab-links active-link" onclick="opentab('skills')">Skills</p>
+                        <p class="tab-links" onclick="opentab('hard-skills')">Hard Skills</p>
+                        <p class="tab-links" onclick="opentab('experience')">Experience</p>
+                        <p class="tab-links" onclick="opentab('education')">Academic History</p>
+                        <p class="tab-links" onclick="opentab('language')">Language</p>                        
+                    </div>
+ <!-- Aici scriu ce e la skills si pot sa configurez -->
+                    <div class="tab-contents active-tab" id="skills">
+                        <ul>
+                            <li><span>Cloud Platforms</span><br>Proficient in Microsoft Azure cloud platform, showcasing in-depth knowledge of its services, features, and tools.</li>
+                            <li><span>Infrastructure as Code (IaC)</span><br>Proficient in Azure IaC using tools like Terraform, ARM templates, and CloudFormation. Efficiently provision and manage cloud resources, maintaining streamlined infrastructure configurations</li>
+                            <li><span>Cloud Architecure</span><br>Demonstrated expertise in cloud architecture principles and best practices, designing highly available, secure, and scalable cloud solutions.</li>
+                            <li><span>DevOps</span><br>Azure DevOps Engineer adept at using Microsoft Azure technologies for software development, testing, and deployment. Skilled in implementing continuous integration and deployment (CI/CD) workflows, utilizing Agile methodologies, and managing Azure resources. Successfully leads cross-functional teams, ensuring efficient collaboration and high-quality software delivery.</li> 
+
+                        </ul>
+                    </div>
+                    <div class="tab-contents" id="hard-skills">
+                        <div class="hard-skills-column">
+                          <ul>
+                            <li><span>Microsoft Office Package</span><br>ELCD Certificate</li>
+                            <li><span>C++</span><br>Intermediate</li>
+                            <li><span>Java</span><br>Intermediate</li>
+                            <li><span>Linux</span><br>Intermediate</li>
+                          </ul>
+                        </div>
+                        <div class="hard-skills-column">
+                          <ul>
+                            <li><span>C#</span><br>Intermediate</li>
+                            <li><span>SQL</span><br>Intermediate</li>
+                            <li><span>HTML & CSS & JavaScript</span><br>Advanced</li>
+                          </ul>
+                        </div>
+                      </div>
+ <!-- Aici scriu ce e la Experience si pot sa configurez -->
+
+ <div class="tab-contents" id="experience">
+    <ul>
+      <li>
+        <span class="expand-btn" onclick="toggleContent(this, 'experience')"><span3>Microsoft</span3></span>
+        <br>
+        <span><span3>AzureAppServiceEngineer</span3></span>
+        <br>
+        <span>2022 - Present</span>
+        <div class="expand-content" style="display: none;">
+          <p>- Providing technical support to customers who are using Azure App Services and troubleshooting complex technical issues including but not limited to: deployments, networking configuration, scalability and performance, cloud best practices.</p>
+          <p>- Interacting with customers through e-mail and phone in order to analyze and diagnose the originating cause of the reported behavior together with providing solutions and/or workarounds.</p>
+          <p>- Collaborating with several teams within Microsoft for escalating complex issues and driving further the resolution.</p>
+          <p>- Documenting technical issues and solutions</p>
+        </div>
+       
+      </li>
+      <li>
+        <span class="expand-btn" onclick="toggleContent(this, 'experience')"><span3>LEO Cozia Ramicu Valcea - District 124 Romania</span3></span>
+        <br>
+        <span><span3>President/Vice-President/Member</span3></span>
+        <br>
+        <span>2015 - 2022</span>
+        <div class="expand-content" style="display: none;">
+          <p>-I organised and coordinated over 50 charitable and social projects as a member of LEOCozia such as: charitable Christmas concerts, Candy hunt for children, Greening in theaffected areas
+            - As a Vice-President, I developed valuable skills including: public speaking, effectivecommunication, negotiation techniques (with new sponsors for internal projects),empathy
+            - As a President, I had over 100 members to guide, organise and more important toinspire them to a successful leadership experience. During one year, I have improved myability to work under pressure and organise social events.</p>
+        </div>
+        
+      </li>
+      <li>
+        <span class="expand-btn" onclick="toggleContent(this, 'experience')"><span3>VWI - Estiem Bucharest</span3></span>
+        <br>
+        <span><span3>Project Leader & Member</span3></span>
+        <br>
+        <span>2018 - 2022</span>
+        <div class="expand-content" style="display: none;">
+          <p>- Took part in several projects, meetings and workshops
+            - I was actively engaged in helping and interacting with project leaders and their tasks
+            - Communicated constantly with different companies
+            - I was engaged in social media advertising</p>
+        </div>
+        <span class="additional-span" style="display: none;">Project Leader & Member 2018 - 2022</span>
+      </li>
+      <li>
+        <span class="expand-btn" onclick="toggleContent(this, 'experience')"><span3>Microsoft</span3></span>
+        <br>
+        <span><span3>Azure App Service Intern</span3></span>
+        <br>
+        <span>Mar 2021 - May 2021</span>
+        <div class="expand-content" style="display: none;">
+          <p>- I gained knowledge about the Azure cloud.
+            - I had the opportunity to expand my professional network and meet many wonderfulpeoples.
+            - I had the opportunity to work with a diverse range of Microsoft products
+            - I gained an understanding of Microsoft's culture and its core priorities</p>
+        </div>
+        
+      </li>
+      <li>
+        <span class="expand-btn" onclick="toggleContent(this, 'experience')"><span3>EZPIMA S.R.L</span3></span>
+        <br>
+        <span><span3>General Manager</span3></span>
+        <br>
+        <span>2018 - 2022</span>
+        <div class="expand-content" style="display: none;">
+          <p>Optimize social media advertising campaigns to maximize reach and engagement.
+            Foster collaborations with renowned promotion platforms such as Booking, Google, and other industry leaders.
+            Prioritize exceptional guest satisfaction by delivering personalized and memorable experiences.
+            Innovate and implement creative strategies to attract and captivate a broader audience of tourists.
+            Craft comprehensive business plans and execute sophisticated marketing tactics to drive growth and profitability.</p>
+        </div>
+      
+      </li>
+      <!-- Add more list items as needed -->
+    </ul>
+  </div>
+ <!-- Aici scriu ce e la Education si pot sa configurez -->    
+                    <div class="tab-contents" id="education">
+                        <ul>
+                            <li><span>Polytechnic University of Bucharest,Faculty of Engineering in ForeignLanguages</span>
+                                <br><span4>Bachelor Degree</span4><br>
+                                2018-2022<br>
+                            <span>Telecommunication Electronics andInformation Technology</span>
+                        </li>
+                            <li><span>Polytechnic University of Bucharest,Faculty of Engineering in ForeignLanguages</span>
+                                <br>
+                                <span4>Master's Degree</span4>
+                                <br>2022-Present <br>
+                                <span4>Sustainable excellence and industryleadership</span4></li>
+
+                            <li><span>National Computer Science College Matei Basarab</span>
+                                <br>High School Diploma<br>
+                            <span>2014-2018</span><br>
+                        <span4>MATHEMATICS AND COMPUTER SCIENCE</span4></li>
+                        </ul>
+                    </div>
+                    <div class="tab-contents" id="language">
+                        <ul>
+                            <li><span>English</span>    expert.</li>
+                            <li><span>German</span>     advenced</li>
+                            <li><span>French</span>     beginner</li>       
+                        </ul>
+                    </div>
+
+                </div>
+
+            </div>
+        </div> 
+
+    </div> 
+
+<!-- services --> 
+<div id="services">
+    <div class="container">
+        <h1 class="sub-title">My services</h1>
+        <div class="services-list">
+            <div>
+                <i class="fa-solid fa-code"></i> <!-- cu asta dau display la un icon de pe site u ala--> 
+                <h2>DevOps Engineer</h2>
+                <p>As an Azure DevOps Engineer, I specialize in streamlining and automating development workflows and deployment processes on the Azure platform, facilitating efficient delivery of high-quality software updates</p>
+                
+            </div>
+
+            <div>
+                <i class="fa-solid fa-cloud"></i> <!-- cu asta dau display la un icon de pe site u ala-->
+                <h2>Cloud Administrator</h2>
+                <p>As a Cloud Administrator, I'm responsible for efficiently managing and deploying cloud resources, maintaining secure and scalable environments, and implementing robust cloud infrastructure for optimal performance.</p>
+                
+            </div>
+            <div>
+                <i class="fa-solid fa-cloud-arrow-up"></i><!-- cu asta dau display la un icon de pe site u ala-->
+                <h2>Cloud Engineer</h2>
+                <p>As an Azure Cloud Engineer, I proficiently manage and optimize Azure cloud resources, implement cloud solutions, and ensure scalable, secure, and efficient cloud infrastructures.</p>
+                
+            </div>
+
+        </div>
+
+    </div>
+</div>
+
+
+<!-- Portofolo my work -->
+<div id="portofolio">
+    <div class="container">
+    <h1 class="sub-title">Certifications</h1>
+    <div class="work-list">
+        <div class="work">
+            <img src="images/az900.png" alt="">
+            <div class="layer">
+                <h3>Azure Fundamentals<br>Certification<br>Az900</h3>
+                <p>The Azure Fundamentals AZ-900 certification verifies basic understanding of cloud services via Microsoft Azure.</p>
+                <a href="https://learn.microsoft.com/en-us/certifications/exams/az-900/" target="_blank"><i class="fa-solid fa-link"></i></a> 
+            </div>
+        </div>
+        <div class="work">
+            <img src="images/az104.png" alt="">
+            <div class="layer">
+                <h3>Azure Administrator<br>Certification<br>Az104</h3>
+                <p>The Azure Administrator AZ-104 certification validates the skills needed to manage, monitor, and implement Microsoft Azure solutions</p>
+                <a href="https://learn.microsoft.com/en-us/certifications/exams/az-104/" target="_blank"><i class="fa-solid fa-link"></i></a> 
+            </div>
+        </div>
+        <div class="work">
+            <img src="images/az400.png" alt="">
+            <div class="layer">
+                <h3>Azure DevOps Engineer<br>Certification<br>Az400</h3>
+                <p>AZ-400 certified professional, I possess demonstrated expertise in implementing Azure DevOps solutions and practices.</p>
+                <a href="https://learn.microsoft.com/en-us/certifications/exams/az-400/" target="_blank"><i class="fa-solid fa-link"></i></a> 
+            </div>
+        </div>
+    </div>
+    <a href="https://learn.microsoft.com/en-us/users/me/achievements" target="_blank" class="btn">See more</a>
+    </div>
+</div> 
+
+<!-- Contact part -->
+<div id="contact">
+    <div class="container">
+        <div class="row">
+            <div class="contact-left">
+                <h1 class="sub-title">Contact Me</h1>
+                <p><i class="fa-regular fa-envelope"></i>mihaiandrei_zapuc@yahoo.com</p>
+                <p><i class="fa-solid fa-phone"></i>+40 0733433187</p>
+                <div class="social-icons">
+                    <a href="https://www.linkedin.com/in/mihai-andrei-zapuc-92a51b1b9/" target="_blank"><i class="fa-brands fa-linkedin"></i> </a>
+                    <a href=""><i class="fa-brands fa-facebook"></i></a>
+                    <a href=""><i class="fa-brands fa-instagram"></i></a>
+                </div>
+                <a href="images/ZapucMihaiAndrei-Resume.pdf" download class="btn btn2">Download CV</a>
+            </div>
+            <div class="contact-right">
+                <form name="submit-to-google-sheet">
+                    <input type="text" name="Name" placeholder="Your Name" required>
+                    <input type="email" name="Email" placeholder="Your Email" required>
+                    <textarea name="Message"  rows="10" placeholder="Your message"> </textarea>
+                    <button type="submit" class="btn btn2">Submit</button>
+                </form>
+                <span id="msg"></span>
+            </div>
+        </div>
+    </div>
+    <div class="copyright">
+        <p>Copyright © Andrei Mihai. Made with <i class="fa-solid fa-heart"></i> by Andrei </p>
+    </div>
+</div>
+
+
+
+    <script>
+        var tablinks= document.getElementsByClassName("tab-links");
+        var tabcontents= document.getElementsByClassName("tab-contents");
+    </script>
+    <script src="app.js"></script>
+
+      <script>
+        const scriptURL = 'https://script.google.com/macros/s/AKfycbxDX4xEcOrL9eT_1f4ztHqByaNaXFC1sz-JRHj_yL6RRHvqgd-UcaS5yg3OlSZJvOv0/exec'
+        const form = document.forms['submit-to-google-sheet']
+        const msg =document.getElementById("msg")
+      
+        form.addEventListener('submit', e => {
+          e.preventDefault()
+          fetch(scriptURL, { method: 'POST', body: new FormData(form)})
+            .then(response =>{
+                msg.innerHTML = "Message sent successfully"
+                setTimeout(function()
+                {
+                    msg.innerHTML = ""
+                }, 5000)
+                form.reset()
+            } )
+            .catch(error => console.error('Error!', error.message))
+        })
+      </script>
+</body>
+</html>

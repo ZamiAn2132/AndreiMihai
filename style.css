@@ -1,0 +1,540 @@
+*{
+    margin: 0;
+    padding: 0;
+    font-family: 'Poppins', sans-serif;
+    box-sizing: border-box;
+}
+html{
+    scroll-behavior: smooth;
+}
+
+body{
+    background: #080808 ;
+    color: #fff;
+}
+
+#header{
+    width: 100%;
+    height: 100vh;
+    background-image: url(images/andrei-background.png) ;
+    background-size: cover;
+    background-position: center;
+    
+
+}
+.container{
+    padding: 10px 10%;
+}
+
+.semi-title{
+    padding:50px 0;
+   text-align: left;
+}
+
+.semi-title h2{
+        font-family: 'Montserrat', sans-serif;
+        font-weight: bold;
+        font-size: 24px;
+        color: #CCCCCC;
+      
+}
+nav{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+.logo{
+    width: 240px;
+    display: inline-block;
+}
+
+nav ul li{
+    display: inline-block;
+    list-style: none;
+    margin: 10px 20px;
+}
+/* schimbare pt tagul "a" */
+nav ul li a{ 
+    color: #fff;
+    text-decoration: none;
+    font-size: 18px;
+    position: relative;
+}
+/*adaug hover effect - dar momentan am adaugat o linie sub: Home About Services Portofolio Contact*/
+nav ul li a::after{
+    content: '';
+    width: 0;
+    height: 3px;
+    background: #ff004f;
+    position: absolute;
+    left: 0;
+    bottom: -6px;
+    transition: 0.5s; /*cat de repede se incarca linia de sub*/
+}
+/* aici o sa fac linia aia sa apara cand e hover*/
+nav ul li a:hover::after{
+    width: 100%; /* cat de lunga e lina de sub home spre ex */
+}
+
+/* aici configurez clasa header-text cum arata culoare, stil, font, pozitie, etc */
+.header-text{
+    margin-top: 10%;
+    font-size: 30px;
+
+}
+/* aici configurez clasa header-text din tagul h1: cum arata culoare, stil, font, pozitie, etc */
+.header-text h1{
+    font-size: 60px;
+    margin-top: 20px;
+
+}
+/* aici configurez tot ce e in tagul span in cazu meu dora "title" */
+.header-text h1 span{
+    color:#ff004f;
+}
+
+/* ------ABOUT PART ----------*/
+
+#about{
+padding: 80px 0;
+color: #ababab ;
+}
+
+.row{
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+.about-col-1{
+    flex-basis: 35%;
+
+}
+/* configurez in clasa about 1, dar cu tagul img*/
+.about-col-1 img{
+width: 100%;
+border-radius: 15px;
+margin-left: 10px;
+
+}
+
+
+.about-col-2{
+    flex-basis: 60%;
+}
+.sub-title{ /* configurez scrisul "about me" */
+    font-size: 60px;
+    font-weight: 600;
+    color: #fff;
+
+}
+
+.about-text {
+    font-size: 18px;
+    line-height: 1.5;
+    color: #FFFFFF; /* White color */
+    background-color: #2C2C2C; /* Dark gray background */
+    padding: 15px;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+    margin-bottom: 20px;
+  }
+
+.tab-titles{
+    display: flex;
+    margin: 20px 0 40px;
+
+}
+.tab-links{ /* configurez scrisul: Skills Experience Education care sunt in clasa tab-links */
+    margin-right: 50px;
+    font-size: 18px;
+    font-weight: 500;
+    cursor: pointer;
+    position: relative;
+
+}
+/* linia de sub aia rosie*/
+.tab-links::after{
+    content: '';
+    width: 0;
+    height: 3px;
+    background: #ff004f;
+    position: absolute;
+    left: 0;
+    bottom: -8px;
+    transition: 0.5s;
+}
+.tab-links.active-link::after{
+    width: 50%;
+}
+
+.tab-contents ul li{
+    list-style: none;
+    margin: 10px 0;
+
+}
+/* configurez ce e in tagul span*/
+.tab-contents ul li span{
+    color: #fff;
+    font-size: 20px;
+}
+
+.tab-contents ul li span2{
+    color: #ff004f;
+    font-size: 14px;
+}
+
+.tab-contents ul li span3{
+    color: #ff004f;
+    font-size: 20px;
+}
+
+.tab-contents ul li span4{
+    color: #CCCCCC;
+    font-size: 20px;
+
+}
+.tab-contents {
+    display:none;
+    
+  }
+
+  .hard-skills-column {
+    flex-basis: 50%;
+  }
+  
+  .hard-skills-column h3 {
+    font-weight: 500;
+    margin-bottom: 10px;
+  }
+  
+  .hard-skills-column ul {
+    padding: 0;
+    margin: 0;
+    list-style-type: none;
+  }
+  
+  .hard-skills-column ul li {
+    margin-bottom: 10px;
+  }
+
+/* aici facem sa apara chestill de la skill exeperience si education*/
+.tab-contents.active-tab{
+    display: flex;
+    justify-content: space-between;
+}
+
+/* -----------SERVICES PART -----------------*/
+
+#services{
+    padding: 30px 0;
+}
+.services-list{
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    grid-gap: 40px;
+    margin-top: 50px;
+}
+
+.services-list div{
+    background: #262626;
+    padding: 40px;
+    font-size: 13px;
+    font-weight: 300;
+    border-radius: 10px ;
+    transition: background 0.5s, transform 0.5s ;
+
+}
+.services-list div i{
+    font-size: 50px;
+    margin-bottom: 30px;
+}
+.services-list div h2{
+    font-size: 30px;
+    font-weight: 500;
+    margin-bottom: 15px;
+}
+.services-list div a{
+    text-decoration: none;
+    color: #fff;
+    font-size: 12px;
+    margin-top: 20px;
+    display: inline-block;
+}
+.services-list div:hover{
+    background: #ff004f;
+    transform: translateY(-10px);
+}
+
+/* -----------PORTOFOLIO PART -----------------*/
+#portofolio{
+    padding: 50px 0;
+
+}
+.work-list{
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    grid-gap: 40px;
+    margin-top: 50px;
+}
+.work{
+    border-radius: 10px;
+    position: relative;
+    overflow: hidden;
+}
+.work img{
+    width: 100%;
+    border-radius: 10px;
+    display: block;
+    transition: transform 0.5s;
+
+}
+.layer{
+    width: 100%;
+    height: 0%;
+    background: linear-gradient(rgba(0,0,0,0.6), #ff004f);
+    border-radius: 10px;
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center ;
+    flex-direction: column;
+    padding: 0 40px;
+    text-align: center;
+    font-size: 14px;
+    transition: height 0.5s ;
+
+}
+.layer h3{
+    font-weight: 500;
+    margin-bottom: 20px;
+}
+.layer a{
+    margin-top: 20px;
+    color: #ff004f;
+    text-decoration: none;
+    font-size: 18px;
+    line-height: 60px;
+    background: #fff;
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    text-align: center;
+
+}
+.work:hover img{
+    transform: scale(1.1) ;
+}
+.work:hover .layer{
+    height: 100%;
+}
+/* -----------buttonu see more-----------------*/
+.btn{
+    display: block;
+    margin: 50px auto;
+    width: fit-content;
+    border: 1px solid #ff004f;
+    padding: 14px 50px;
+    border-radius: 6px;
+    text-decoration: none;
+    color: #fff;
+    transition: backgound 0.5s;
+}
+.btn:hover{
+    background: #ff004f;
+}
+
+/* -----------Conntact part-----------------*/
+
+.contact-left{
+    flex-basis: 35%;
+}
+
+.contact-right{
+    flex-basis: 60%;
+}
+
+.contact-left p{
+    margin-top: 30px;
+}
+.contact-left p i{
+    color: #ff004f;
+    margin-right: 15px;
+    font-size: 25px;
+}
+.social-icons{
+    margin-top: 30px;
+}
+.social-icons a{
+    text-decoration: none ;
+    font-size: 30px;
+    margin-right: 15px;
+    color: #ababab;
+    display: inline-block;
+    transition: transform 0.5s;
+
+}
+.social-icons a:hover{
+    color: #ff004f;
+    transform: translateY(-5px);/* muta iconu cu 5 px in sus */
+}
+
+.btn.btn2{
+    display: inline-block;
+    background: #ff004f ;
+}
+.contact-right form{
+    width: 100%;
+}
+form input, form textarea{
+    width: 100%;
+    border: 0;
+    outline: none;
+    background: #262626;
+    padding: 15px;
+    margin: 15px 0;
+    color: #fff;
+    font-size:18px ;
+    border-radius: 6px;
+}
+form btn2{
+    padding: 14px 60px;
+    font-size: 18px;
+    margin-top: 20px;
+    cursor: pointer;
+}
+.copyright{
+    width: 100%;
+    text-align: center;
+    padding: 25px 0;
+    background: #262626;
+    font-weight: 300;
+    margin-top: 20px;
+
+}
+.copyright i{
+    color: red;
+}
+
+/* script for small screen adica responsive */
+nav .fa-solid
+{
+    display: none;
+}
+@media only screen and (max-width: 600px){
+    #header{
+        background-image: url(image/andrei-background.png);
+
+    }
+    .header-text{
+        margin-top: 100%;
+        font-size: 16px;
+
+    }
+    .header-text h1{
+        font-size: 30px;
+    }
+    nav .fa-solid
+{
+    display: block;
+    font-size: 25px;
+}
+/* butoanele de meniu si close*/
+nav ul{
+    background: #ff004f;
+    position: fixed;
+    top: 0;
+    right: -200px;
+    width: 200px;
+    height: 100vh;
+    padding-top: 50px;
+    z-index: 2;
+    transition: right 0.5s;
+}
+nav ul li{
+    display: block;
+    margin: 25px;
+}
+nav ul .fa-solid{
+    position: absolute;
+    top: 25px;
+    left: 25px;
+    cursor: pointer;
+}
+.sub-title{
+    font-size: 40px;
+}
+.about-col-1, .about-col-2{
+    flex-basis: 100%;
+}
+.about-col-1{
+    margin-bottom: 30px;
+}
+.about-col-2{
+    font-size: 14px;
+}
+.tab-links{
+    font-size: 16px;
+    margin-right: 20px;
+
+}
+.contact-left, .contact-right{
+    flex-basis: 100%;
+}
+.copyright{
+    font-size: 14px;
+}
+
+.tab-contents ul {
+    columns: 1; /* Change to a single column on smaller screens */
+  }
+  
+  .expand-content p {
+    font-size: 12px; /* Adjust the font size for smaller screens */
+  }
+
+}
+#msg{
+    color: #b1b752;
+    margin-top: -10px;
+    display: block;
+}
+
+.expand-btn {
+    text-decoration: none;
+    cursor: pointer;
+    position: relative;
+  }
+  
+  .expand-btn:hover {
+    text-decoration: none;
+  }
+  
+  .expand-btn::after {
+    content: '';
+    position: absolute;
+    bottom: -2px;
+    left: 0;
+    width: 0;
+    height: 1px;
+    background-color: #FFFFFF;
+    opacity: 0;
+    transition: width 0.5s ease; /* Add transition property */
+  }
+  
+  .expand-btn:hover::after {
+    width: 100%; /* Expand the underline on hover */
+    opacity: 1;
+  }
+  
+  .expand-content {
+    display: none;
+    transition: max-height 0.5s ease;
+    overflow: hidden;
+  }
+  
